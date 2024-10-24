@@ -1,0 +1,223 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API\\XERO.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.DataAccess\\XERO.API.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.DataAccess\\XERO.API.DataAccess.csproj",
+        "projectName": "XERO.API.DataAccess",
+        "projectPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.DataAccess\\XERO.API.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\stephanie keown\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\stephanie keown\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://pkgs.dev.azure.com/justourcode/HDS-DestinationRetirement/_packaging/HDS-DestinationRetirement/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/justourcode/HDS-Prime/_packaging/HDS-Prime/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24474.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24474.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.Services\\XERO.API.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.Services\\XERO.API.Services.csproj",
+        "projectName": "XERO.API.Services",
+        "projectPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.Services\\XERO.API.Services.csproj",
+        "packagesPath": "C:\\Users\\stephanie keown\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\stephanie keown\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://pkgs.dev.azure.com/justourcode/HDS-DestinationRetirement/_packaging/HDS-DestinationRetirement/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/justourcode/HDS-Prime/_packaging/HDS-Prime/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.DataAccess\\XERO.API.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.DataAccess\\XERO.API.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API\\XERO.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API\\XERO.API.csproj",
+        "projectName": "XERO.API",
+        "projectPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API\\XERO.API.csproj",
+        "packagesPath": "C:\\Users\\stephanie keown\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\stephanie keown\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://pkgs.dev.azure.com/justourcode/HDS-DestinationRetirement/_packaging/HDS-DestinationRetirement/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/justourcode/HDS-Prime/_packaging/HDS-Prime/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.Services\\XERO.API.Services.csproj": {
+                "projectPath": "C:\\Users\\stephanie keown\\source\\repos\\XERO.API\\XERO.API.Services\\XERO.API.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

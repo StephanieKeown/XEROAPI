@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "t53Ya6VVfseSlh0HPA3CEjGhvyl7A8ltTdIfVxVuIME=",
+  "Source": "XERO.API",
+  "BasePath": "_content/XERO.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

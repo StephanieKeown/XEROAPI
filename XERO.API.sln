@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XERO.API", "XERO.API\XERO.API.csproj", "{9B9417CB-CAF6-4221-9A62-8F850BD63E07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XERO.API.Services", "XERO.API.Services\XERO.API.Services.csproj", "{4C57D784-7AF3-4386-84CC-4714ED1D9FE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XERO.API.DataAccess", "XERO.API.DataAccess\XERO.API.DataAccess.csproj", "{1DB045E5-F37A-4C18-AA7F-34B45DF1B8AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XERO.API.UnitTests", "XERO.API.UnitTests\XERO.API.UnitTests.csproj", "{846109AC-D2E4-40F6-8AD0-FB0A42FA708C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{DFA86D05-7C4A-4A64-A16E-EAEAE7419810}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+		..\..\..\Desktop\XERO_Db.sql = ..\..\..\Desktop\XERO_Db.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B9417CB-CAF6-4221-9A62-8F850BD63E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9417CB-CAF6-4221-9A62-8F850BD63E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9417CB-CAF6-4221-9A62-8F850BD63E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9417CB-CAF6-4221-9A62-8F850BD63E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C57D784-7AF3-4386-84CC-4714ED1D9FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C57D784-7AF3-4386-84CC-4714ED1D9FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C57D784-7AF3-4386-84CC-4714ED1D9FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C57D784-7AF3-4386-84CC-4714ED1D9FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB045E5-F37A-4C18-AA7F-34B45DF1B8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB045E5-F37A-4C18-AA7F-34B45DF1B8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB045E5-F37A-4C18-AA7F-34B45DF1B8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB045E5-F37A-4C18-AA7F-34B45DF1B8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846109AC-D2E4-40F6-8AD0-FB0A42FA708C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846109AC-D2E4-40F6-8AD0-FB0A42FA708C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846109AC-D2E4-40F6-8AD0-FB0A42FA708C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846109AC-D2E4-40F6-8AD0-FB0A42FA708C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2444ABCA-FDED-4955-82AB-6658E4CB5899}
+	EndGlobalSection
+EndGlobal

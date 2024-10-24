@@ -1,0 +1,15 @@
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\bin\Debug\net8.0\XERO.API.Services.deps.json
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\bin\Debug\net8.0\XERO.API.Services.dll
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\bin\Debug\net8.0\XERO.API.Services.pdb
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\bin\Debug\net8.0\XERO.API.DataAccess.dll
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\bin\Debug\net8.0\XERO.API.DataAccess.pdb
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.csproj.AssemblyReference.cache
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.AssemblyInfoInputs.cache
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.AssemblyInfo.cs
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.csproj.CoreCompileInputs.cache
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.714E71FE.Up2Date
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.dll
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\refint\XERO.API.Services.dll
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\XERO.API.Services.pdb
+C:\Users\stephanie keown\source\repos\XERO.API\XERO.API.Services\obj\Debug\net8.0\ref\XERO.API.Services.dll
