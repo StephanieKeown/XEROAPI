@@ -14,7 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{DFA86D05-7C4A-4A64-A16E-EAEAE7419810}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
-		..\..\stephanie keown\Desktop\XERO.postman_collection.json = ..\..\stephanie keown\Desktop\XERO.postman_collection.json
+		SolutionItems\XERO.postman_collection.json = SolutionItems\XERO.postman_collection.json
 		..\..\..\Desktop\XERO_Db.sql = ..\..\..\Desktop\XERO_Db.sql
 	EndProjectSection
 EndProject
