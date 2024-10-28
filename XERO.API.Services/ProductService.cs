@@ -5,12 +5,11 @@ using XERO.API.DTO;
 using XERO.API.Services.Interfaces;
 
 namespace XERO.API.Services
-{//Add cancellation tokens
+{
     public class ProductService : IProductService
     {
         private readonly XeroDbContext _context;
 
-        // Constructor injection of DbContextscribd
         public ProductService(XeroDbContext context)
         {
             _context = context;
@@ -26,14 +25,14 @@ namespace XERO.API.Services
                     Description = product.Description,
                     DeliveryPrice = product.DeliveryPrice,
                     Price = product.Price
-                }).ToListAsync(cancellationToken); //async?
+                }).ToListAsync(cancellationToken);
 
-        } //im injecting from the same prject
+        }
 
         public async Task<IEnumerable<ProductDto>> GetProductsByName(string name, CancellationToken cancellationToken = default)
         {
             return await _context.Products
-                .Where(product => product.Name == name)  // Filter before fetching from the database
+                .Where(product => product.Name == name)
                 .Select(product => new ProductDto
                 {
                     Id = product.Id,
@@ -76,7 +75,7 @@ namespace XERO.API.Services
 
             return new ProductDto
             {
-                Id = newProduct.Id,  // The generated Id
+                Id = newProduct.Id,
                 Name = newProduct.Name,
                 Description = newProduct.Description,
                 DeliveryPrice = newProduct.DeliveryPrice,
@@ -86,24 +85,21 @@ namespace XERO.API.Services
 
         public async Task<bool> UpdateProduct(Guid id, ProductDto updateProductDto, CancellationToken cancellationToken = default)
         {
-            // Find the existing product
             var existingProduct = await _context.Products.FirstOrDefaultAsync(p => p.Id == id, cancellationToken);
 
             if (existingProduct == null)
             {
-                return false; // Product not found
+                return false;
             }
 
-            // Update the product fields
             existingProduct.Name = updateProductDto.Name;
             existingProduct.Description = updateProductDto.Description;
             existingProduct.Price = updateProductDto.Price;
             existingProduct.DeliveryPrice = updateProductDto.DeliveryPrice;
 
-            // Save changes to the database
             await _context.SaveChangesAsync(cancellationToken);
 
-            return true; // Update was successful
+            return true;
         }
         public async Task<bool> DeleteProduct(Guid id, CancellationToken cancellationToken = default)
         {
@@ -189,44 +185,36 @@ namespace XERO.API.Services
 
         public async Task<bool> UpdateProductOption(Guid productId, Guid optionId, ProductOptionDto optionDto, CancellationToken cancellationToken = default)
         {
-            // Find the product option directly by productId and optionId
             var option = await _context.ProductOptions
                 .FirstOrDefaultAsync(po => po.Id == optionId && po.ProductId == productId, cancellationToken);
 
             if (option == null)
             {
-                return false;  // Return false if product or option doesn't exist
+                return false;
             }
 
-            // Update the option details
             option.Name = optionDto.Name;
             option.Description = optionDto.Description;
 
-            // Save the changes
             await _context.SaveChangesAsync(cancellationToken);
 
-            return true; // Return true if the update was successful
+            return true;
         }
 
         public async Task<bool> DeleteProductOption(Guid productId, Guid optionId, CancellationToken cancellationToken = default)
         {
-            // Find the product option directly by both productId and optionId
             var option = await _context.ProductOptions
                 .FirstOrDefaultAsync(po => po.Id == optionId && po.ProductId == productId, cancellationToken);
 
             if (option == null)
             {
-                return false;  // Return false if product option doesn't exist
+                return false;
             }
 
-            // Delete the option
             _context.ProductOptions.Remove(option);
             await _context.SaveChangesAsync(cancellationToken);
 
-            return true;  // Return true if deletion was successful
+            return true;
         }
-
-
-
     }
 }

@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "f5b7ed43-f9f0-474e-936f-b09f9f0ee324",
+		"name": "XERO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29656928",
+		"_collection_link": "https://hub-financial-solutions-983495.postman.co/workspace/Team-Workspace~1a642e73-b2d2-479e-87d3-bdb51d140168/collection/29656928-f5b7ed43-f9f0-474e-936f-b09f9f0ee324?action=share&source=collection_link&creator=29656928"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products?name=Samsung Galaxy S7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Samsung Galaxy S7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByNameFail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products?name=Samsung Galaxy S7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Samsung Galaxy S7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "543320E5-2444-4A26-AA80-A59FA50B56D4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct-FailValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct - Fail Validation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductOptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductOption",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options/{optionId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options",
+						"{optionId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductOption - Not Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options/{optionId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options",
+						"{optionId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductOption - Not Found Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options/{optionId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options",
+						"{optionId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProductOption",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProductOption",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options/{optionId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options",
+						"{optionId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProductOption",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44377/products/{id}/options/{optionId}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44377",
+					"path": [
+						"products",
+						"{id}",
+						"options",
+						"{optionId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

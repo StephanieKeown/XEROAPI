@@ -35,16 +35,16 @@ namespace XERO.API.Controllers
         {
             if (string.IsNullOrWhiteSpace(name))
             {
-                return BadRequest("The 'name' query parameter is required."); 
+                return BadRequest("The 'name' query parameter is required.");
             }
 
             var products = await _productService.GetProductsByName(name);
-            if (products == null || !products.Any())
+            if (!products.Any())
             {
-                return NotFound($"No products found with the name '{name}'."); 
+                return NotFound($"No products found with the name '{name}'.");
             }
 
-            return Ok(products); 
+            return Ok(products);
         }
 
         [HttpGet("{id}")]
@@ -59,32 +59,69 @@ namespace XERO.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Product>> Create([FromBody] Product product)
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ProductDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(ValidationProblemDetails))]
+        public async Task<ActionResult<ProductDto>> Create([FromBody] Product product)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState); 
+                return BadRequest(ModelState);
             }
+
+            if (!decimal.TryParse(product.Price, out var parsedPrice))
+            {
+                ModelState.AddModelError("Price", "Price must be a valid decimal number.");
+            }
+
+            if (!decimal.TryParse(product.DeliveryPrice, out var parsedDeliveryPrice))
+            {
+                ModelState.AddModelError("DeliveryPrice", "Delivery price must be a valid decimal number.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var dto = new ProductDto()
             {
                 Name = product.Name,
                 Description = product.Description,
-                DeliveryPrice = product.DeliveryPrice,
-                Price = product.Price
+                Price = parsedPrice,
+                DeliveryPrice = parsedDeliveryPrice
             };
+
             var createdProduct = await _productService.CreateProduct(dto);
             return CreatedAtAction(nameof(GetProduct), new { id = createdProduct.Id }, createdProduct);
-
         }
 
+
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] ProductDto updateProductDto)
+        public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] Product product)
         {
-            if (!ModelState.IsValid)
+            if (!decimal.TryParse(product.Price, out var parsedPrice))
             {
-                return BadRequest(ModelState); 
+                ModelState.AddModelError("Price", "Price must be a valid decimal number.");
             }
 
+            if (!decimal.TryParse(product.DeliveryPrice, out var parsedDeliveryPrice))
+            {
+                ModelState.AddModelError("DeliveryPrice", "Delivery price must be a valid decimal number.");
+            }
+
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var updateProductDto = new ProductDto()
+            {
+                Name = product.Name,
+                Description = product.Description,
+                Price = parsedPrice,
+                DeliveryPrice = parsedDeliveryPrice
+            };
             var isUpdated = await _productService.UpdateProduct(id, updateProductDto);
 
             if (!isUpdated)
@@ -145,7 +182,7 @@ namespace XERO.API.Controllers
 
 
         [HttpPost("{id}/options")]
-        public async Task<IActionResult> CreateOption(Guid id, [FromBody] ProductOptionDto optionDto)
+        public async Task<IActionResult> CreateOption(Guid id, [FromBody] ProductOption option)
         {
             if (!ModelState.IsValid)
             {
@@ -153,7 +190,12 @@ namespace XERO.API.Controllers
             }
             try
             {
-                var createdOption = await _productService.AddOptionToProduct(id, optionDto);
+                var dto = new ProductOptionDto()
+                {
+                    Name = option.Name,
+                    Description = option.Description
+                };
+                var createdOption = await _productService.AddOptionToProduct(id, dto);
 
                 return CreatedAtAction(nameof(GetOption), new { id = id, optionId = createdOption.Id }, createdOption);
             }
@@ -165,14 +207,20 @@ namespace XERO.API.Controllers
 
 
         [HttpPut("{id}/options/{optionId}")]
-        public async Task<IActionResult> UpdateOption(Guid id, Guid optionId, [FromBody] ProductOptionDto optionDto)
+        public async Task<IActionResult> UpdateOption(Guid id, Guid optionId, [FromBody] ProductOption option)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var isUpdated = await _productService.UpdateProductOption(id, optionId, optionDto);
+            var dto = new ProductOptionDto()
+            {
+                Name = option.Name,
+                Description = option.Description
+            };
+
+            var isUpdated = await _productService.UpdateProductOption(id, optionId, dto);
 
             if (!isUpdated)
             {
